@@ -1,5 +1,3 @@
-package textMancala;
-
 import java.util.*;
 
 public class Mancala {
