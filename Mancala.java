@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Mancala {
 
-	private int stones;
+	private int numStartingStones;
 	private int playerBS;
 	private int playerAS;
 	private boolean playerATurn;
@@ -15,15 +15,14 @@ public class Mancala {
 
 	public Mancala(int s) {
 
-		stones = s;
+		numStartingStones = s;
 		playerAS = 0;
 		playerBS = 0;
 		playerATurn = true; // True for player A, false for player B
-		pList = new ArrayList<Pit>();
+		
+		pList = new ArrayList<Pit>(); //ArrayList of Pits
 		for (int i = 0; i < 12; i++) {
-
-			pList.add(new Pit(stones));
-
+			pList.add(new Pit(numStartingStones));
 		}
 		aPit = new Pit(0);
 		bPit = new Pit(0);
@@ -218,11 +217,11 @@ public class Mancala {
 
 	public void printStartBoard() {
 
-		System.out.println("   " + " " + stones + " " + " " + stones + " " + " " + stones + " " + " " + stones + " "
-				+ " " + stones + " " + " " + stones + " ");
+		System.out.println("   " + " " + numStartingStones + " " + " " + numStartingStones + " " + " " + numStartingStones + " " + " " + numStartingStones + " "
+				+ " " + numStartingStones + " " + " " + numStartingStones + " ");
 		System.out.println(" " + playerAS + " " + "                  " + " " + playerBS + " ");
-		System.out.println("   " + " " + stones + " " + " " + stones + " " + " " + stones + " " + " " + stones + " "
-				+ " " + stones + " " + " " + stones + " ");
+		System.out.println("   " + " " + numStartingStones + " " + " " + numStartingStones + " " + " " + numStartingStones + " " + " " + numStartingStones + " "
+				+ " " + numStartingStones + " " + " " + numStartingStones + " ");
 
 	}
 
